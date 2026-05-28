@@ -1,2 +1,4 @@
 streamlit
+supabase
 stripe
+python-dotenv
