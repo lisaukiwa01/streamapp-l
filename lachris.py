@@ -292,9 +292,8 @@ def auth_screen():
     password = st.text_input("Password", type="password")
 
     if choice == "Signup" and st.button("Signup"):
-        user = signup(email, password)
-        if user and user.user:
-            st.session_state.page = "login"
+        signup(email, password)
+        st.success("Sign up successful. Check your email for authentication link.")
 
     if choice == "Login" and st.button("Login"):
         user = login(email, password)
