@@ -47,6 +47,7 @@ html, body, p, h1, h2, h3, h4, h5, h6, span, label, div {
     font-family: 'Maharlika', sans-serif;
 }
 
+header, footer {visibility: hidden;}
 .stApp {
     background-color: #fff4f8;
 }
