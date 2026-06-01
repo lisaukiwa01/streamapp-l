@@ -3,18 +3,14 @@ import stripe
 import base64
 import os
 from dotenv import load_dotenv
-from supabase import create_client, Client
+from supabase import create_client
 
 load_dotenv()
-
-supabase_url = "https://upcswibeskkrhqxksyuq.supabase.co"
-supabase_key = "sb_secret_c_aEVNo85Bc1ZHoshuCLbg_DID7rV4a"
-
-supabase: Client = create_client(supabase_url, supabase_key)
-
-stripe.api_key = "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"
-stripe_publishable_key = "pk_live_51TPD366ZpkfcZ03whypcb9l09000PRZnqkGK2efYuPTISMLTXbBpM6GHtBaKWQ2FbWfo3dgLtqLAsSOapAuNS5T800pjakfCEz"
-
+supabase_url = os.getenv("SUPABASE_URL")
+supabase_key = os.getenv("SUPABASE_KEY")
+supabase = create_client(supabase_url, supabase_key)
+stripe.api_key = os.getenv("STRIPE_SECRET_KEY")
+stripe_publishable_key = os.getenv("STRIPE_PUBLISHABLE_KEY")
 params = st.query_params
 
 
