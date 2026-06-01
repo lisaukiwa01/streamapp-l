@@ -12,7 +12,7 @@ supabase_key = "sb_secret_c_aEVNo85Bc1ZHoshuCLbg_DID7rV4a"
 
 supabase: Client = create_client(supabase_url, supabase_key)
 
-stripe.api_key = "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"
+stripe.api_key = "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"
 stripe_publishable_key = "pk_live_51TPD366ZpkfcZ03whypcb9l09000PRZnqkGK2efYuPTISMLTXbBpM6GHtBaKWQ2FbWfo3dgLtqLAsSOapAuNS5T800pjakfCEz"
 
 params = st.query_params
